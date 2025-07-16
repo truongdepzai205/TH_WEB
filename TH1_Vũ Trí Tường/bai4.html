@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Info</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 700px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            margin-bottom: 0px;
+        }
+
+        .form-label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        .form-input {
+            display: inline-block;
+            width: 500px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .gender-options input {
+            margin-right: 5px;
+
+        }
+
+        .gender-options label {
+            flex-direction: column;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h3>Basic Info</h3><hr>
+        <div class="form-row">
+            <span class="form-label">Employee ID</span>
+            <span class="form-input"><input type="text" value="9" readonly style ="border: none;"></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">Last Name</span>
+            <span class="form-input"><input type="text" value="Dodsworth" style ="border: none;"></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">First Name</span>
+            <span class="form-input"><input type="text" value="Anne"></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">Gender</span>
+            <span class="form-input gender-options">
+                <label><input type="radio" name="gender" value="Male"> Male</label><br>
+                <label><input type="radio" name="gender" value="Female"> Female</label><br>
+                <label><input type="radio" name="gender" value="XXX"> XXX</label> <br>
+                <label><input type="radio" name="gender" value="ZZZ" checked> ZZZ</label><br>
+            </span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">Title</span>
+            <span class="form-input"><input type="text" value="Sales Representative"></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">Suffix</span>
+            <span class="form-input"><input type="text" value="Ms."></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">BirthDate</span>
+            <span class="form-input"><input type="text" value="1969-07-02 00:00:00"></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">HireDate</span>
+            <span class="form-input"><input type="text" value="1994-11-15 00:00:00"></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">SSN #</span>
+            <span class="form-input"><input type="text"></span>
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">Reports To</span>
+            <span class="form-input">
+                <select>
+                    <option selected>Buchanan</option>
+                </select>
+            </span>
+        </div>
+        <div>
+            <br>
+            <h3>Contact Info</h3>
+            <hr>
+
+            <div class="form-row">
+                <span class="form-label">Email</span>
+                <span class="form-input"><input type="email" id="email" value="name@example.com"></span>
+            </div>
+
+            <div class="form-row">
+                <span class="form-label">Address</span>
+                <span class="form-input"><input type="text" id="address" value="7 Houndstooth Rd."></span>
+            </div>
+
+            <div class="form-row">
+                <span class="form-label">City</span>
+                <span class="form-input"><input type="text" id="city" value="London"></span>
+            </div>
+
+            <div class="form-row">
+                <span class="form-label">Region</span>
+                <span class="form-input"><input type="text" id="region"></span>
+            </div>
+
+            <div class="form-row">
+                <span class="form-label">Postal Code</span>
+                <span class="form-input"><input type="text" id="postalCode" value="WG2 7LT"></span>
+            </div>
+
+            <div class="form-row">
+                <span class="form-label">Country</span>
+                <span class="form-input">
+                    <select id="country">
+                        <option>Russian Federation</option>
+                    </select>
+                </span>
+            </div>
+
+            <div class="form-row">
+                <span class="form-label">US Home Phone</span>
+                <span class="form-input"><input type="text" id="usPhone" value="(234)234-2342"></span>
+            </div>
+
+            <div class="form-row">
+                <span class="form-label">Photo</span>
+                <span class="form-input"><input type="text" id="photo" value="EmpID9.bmp"></span>
+            </div>
+
+        </div>
+    <h3>Optional Info</h3><hr>
+
+    <div class="form-row">
+        <span class="form-label">Notes</span>
+        <span class="form-input">
+            <textarea id="notes" rows="5" style="width: 100%;">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.</textarea>
+        </span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Preferred Shift</span>
+        <span class="form-input">
+            <label><input type="checkbox" name="shift" value="regular"> Regular</label><br>
+            <label><input type="checkbox" name="shift" value="gravyYard" checked> Gravy Yard</label>
+        </span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Active?</span>
+        <span class="form-input">
+            <input type="checkbox" id="active" checked>
+        </span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Are you human?</span>
+        <span class="form-input">
+            <img src="" alt="CAPTCHA"><br>
+            <input type="text" placeholder="">
+        </span>
+    </div>
+    
+    <hr>
+    <div style="display: flex; justify-content: space-between;">
+        <div>
+            <span>
+                <input type = "button" value = "<">
+                <input type = "button" value = ">">
+            </span>
+        </div>
+    
+        <div>
+            <span>
+                <input type="button" value="+ Save">
+                <input type="button" value="- Cancel">
+            </span>
+        </div>
+    </div>
+    <p>* required</p>
+    </form>
+</body>
+
+</html>
