@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Thêm Sinh Viên</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f9f9f9;
+    }
+
+    .form-title, .table-title {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .student-form {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .student-form label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .student-form input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .student-form button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .student-form button:hover {
+        background-color: #218838;
+    }
+
+    .student-table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: white;
+        border: 1px solid #ddd;
+    }
+
+    .student-table th, .student-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .student-table thead {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .student-table tr:hover {
+        background-color: #f1eded8a;
+        text-decoration: underline;
+    }
+
+    .student-table button {
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .student-table button:hover {
+        background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+  <h2 class="form-title">Thêm Sinh Viên</h2>
+
+  <form class="student-form">
+    <label for="masv">Mã sinh viên:</label>
+    <input type="text" id="masv" name="masv" required>
+
+    <label for="hoten">Họ tên:</label>
+    <input type="text" id="hoten" name="hoten" required>
+
+    <label for="lop">Lớp:</label>
+    <input type="text" id="lop" name="lop" required>
+
+    <label for="namsinh">Năm sinh:</label>
+    <input type="number" id="namsinh" name="namsinh" required min="1900" max="2023">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Thêm</button>
+  </form>
+
+  <h2 class="table-title">Danh Sách Sinh Viên</h2>
+
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Mã SV</th>
+        <th>Họ tên</th>
+        <th>Lớp</th>
+        <th>Năm sinh</th>
+        <th>Email</th>
+        <th>Tùy chọn</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0</td>
+        <td>001</td>
+        <td>Nguyễn Văn A</td>
+        <td>K65CNTT</td>
+        <td>2000</td>
+        <td>abcdvdhvjh@gmail.com</td>
+        <td>
+            <button type="button">Sửa</button>
+            <button type="button">Xóa</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>002</td>
+        <td>Trần Thị B</td>
+        <td>K65AI</td>
+        <td>2001</td>
+        <td>fsgdsgdggdf@gmail.com</td>
+        <td>
+            <button type="button">Sửa</button>
+            <button type="button">Xóa</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
