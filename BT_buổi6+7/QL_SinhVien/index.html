@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý sinh viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h3>QUẢN LÝ SINH VIÊN</h3>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2 id="form-title">Thêm sinh viên</h2>
+
+      <div id="notification" style="margin-bottom: 10px;"></div>
+
+      <form id="student-form">
+        <input type="hidden" id="editingIndex" value="">
+
+        <label for="masv">📘 Mã SV:</label>
+        <input type="text" id="masv" placeholder="VD: 001" required>
+
+        <label for="hoten">👤 Họ tên:</label>
+        <input type="text" id="hoten" placeholder="VD: Nguyễn Văn A" required>
+
+        <label for="email">📧 Email:</label>
+        <input type="email" id="email" placeholder="VD: email@example.com" required>
+
+        <label for="sdt">📱 Số điện thoại:</label>
+        <input type="text" id="sdt" placeholder="VD: 0987654321" required>
+
+        <label for="gioitinh">⚧️ Giới tính:</label>
+        <select id="gioitinh" required>
+          <option value="">-- Chọn giới tính --</option>
+          <option value="Nam">Nam</option>
+          <option value="Nữ">Nữ</option>
+          <option value="Khác">Khác</option>
+        </select>
+
+        <label for="namsinh">🎂 Năm sinh:</label>
+        <input type="number" id="namsinh" placeholder="VD: 2005" min="1900" max="2025" required>
+
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Thêm</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Danh sách sinh viên</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Mã SV</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>SĐT</th>
+            <th>Giới tính</th>
+            <th>Năm sinh</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="student-table-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

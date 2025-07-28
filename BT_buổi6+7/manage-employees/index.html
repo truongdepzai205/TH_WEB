@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Employees</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+        <h2>TLU</h2>
+        <a href="#">Home</a>
+        <a href="#">Employees</a>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Search">
+      <button class="search-btn">Search</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="title-bar">
+      <h2>Manage <span>Employees</span></h2>
+      <div class="buttons">
+        <button class="btn delete">- Delete</button>
+        <button class="btn add" id="openForm">+ Add New Employee</button>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox"></th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTable"></tbody>
+    </table>
+  </main>
+
+  <!-- Popup Form -->
+  <div class="popup" id="popupForm">
+    <div class="form-box">
+      <div class="form-header">
+        <h3>Add Employee</h3>
+        <span id="closePopup">×</span>
+      </div>
+      <div class="form-body">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="address" placeholder="Address"></textarea>
+        <input type="text" id="phone" placeholder="Phone">
+        <p class="error" id="errorMsg"></p>
+        <div class="form-footer">
+          <button id="cancelBtn">Cancel</button>
+          <button id="addBtn" class="btn add">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dòng cuối bảng -->
+<div class="pagination-container">
+  <div class="entries-info">
+    Showing 5 out of 25 entries
+  </div>
+  <ul class="pagination">
+    <li><a href="#">Previous</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a class="active" href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</div>
+
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

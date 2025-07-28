@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f5f7;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+}
+
+.table-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 360px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+.form-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 360px;
+  border: 2px solid #d0d4d9; /* Thêm viền rõ */
+  box-shadow: 0 0 16px rgba(10, 10, 10, 0.4); /* Đổ bóng xanh nhẹ */
+  transition: 0.3s;
+}
+
+
+.form-section:hover {
+  box-shadow: 0 0 16px rgba(0,0,0,0.18);
+}
+
+h2 {
+  margin-top: 0;
+  color: #f7f9fb;
+  font-size: 22px;
+  background-color:  #007bff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0,123,255,0.3);
+}
+
+.form-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.form-actions button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.form-actions button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+table tbody tr:hover {
+  background-color: #f1f9ff;
+}
+
+table button {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+table button:last-child {
+  background-color: #dc3545;
+}
+
+table button:hover {
+  opacity: 0.85;
+}
+
+#notification {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #3c763d;
+  border-radius: 5px;
+  display: none; /* Sẽ hiển thị khi có thông báo */
+  font-weight: bold;
+}
